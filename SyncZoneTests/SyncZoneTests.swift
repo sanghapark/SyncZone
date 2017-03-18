@@ -16,9 +16,13 @@ struct User {
 
 class SyncZoneTests: XCTestCase {
   
+  var avatar: String?
+  var syncZoneCalled: Bool = false
+  
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.avatar = nil
   }
   
   override func tearDown() {
@@ -28,19 +32,28 @@ class SyncZoneTests: XCTestCase {
   
   func testExample() {
     
+    let asyncExpectation = expectation(description: "SyncZone awaiting")
     
     SyncZone { await in
+      
+      XCTAssertNotEqual(Thread.current.description, "com.sanghapark.synczone", "must be equal")
+      
+      self.syncZoneCalled = true
       do {
         let user = try await { resolve in self.login(id: "plasticono", pw: "123") { resolve($0) } } as! User
         let avatar = try await { resolve in self.getAvatar(user: user) { resolve($0) } } as! String
-        print(avatar)
-        
-        
+        self.avatar = avatar
+        asyncExpectation.fulfill()
       } catch {
-        print(error)
       }
     }
     
+    XCTAssertFalse(self.syncZoneCalled, "SyncZone must not be called yet.")
+    
+    self.waitForExpectations(timeout: 5) { error in
+      XCTAssertEqual(self.avatar, "https://www.plasticono.com", "it should be https://www.plasticono.com")
+    }
+
   }
   
   func testPerformanceExample() {
