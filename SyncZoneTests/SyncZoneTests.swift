@@ -9,28 +9,57 @@
 import XCTest
 @testable import SyncZone
 
+struct User {
+  var id: String
+  var name: String
+}
+
 class SyncZoneTests: XCTestCase {
+  
+  override func setUp() {
+    super.setUp()
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+  }
+  
+  override func tearDown() {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    super.tearDown()
+  }
+  
+  func testExample() {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    SyncZone { await in
+      do {
+        let user = try await { resolve in self.login(id: "plasticono", pw: "123") { resolve($0) } } as! User
+        let avatar = try await { resolve in self.getAvatar(user: user) { resolve($0) } } as! String
+        print(avatar)
+        
+        
+      } catch {
+        print(error)
+      }
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+  }
+  
+  func testPerformanceExample() {
+    // This is an example of a performance test case.
+    self.measure {
+      // Put the code you want to measure the time of here.
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+  }
+  
+  
+  func login(id: String, pw: String, completion: @escaping (User?) -> ()) {
+    DispatchQueue.global().asyncAfter(deadline: .now() + 1.0) {
+      completion(User(id: "plasticono", name: "parksangha"))
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+  }
+  
+  func getAvatar(user: User, completion: @escaping (String?) -> ()) {
+    DispatchQueue.global().asyncAfter(deadline: .now() + 2.0) { [user] in
+      completion("https://www.\(user.id).com")
     }
-    
+  }
 }

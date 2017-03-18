@@ -11,6 +11,7 @@
 		1BBF536E1E7CDAE100E87BB1 /* SyncZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBF53641E7CDAE100E87BB1 /* SyncZone.framework */; };
 		1BBF53731E7CDAE100E87BB1 /* SyncZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF53721E7CDAE100E87BB1 /* SyncZoneTests.swift */; };
 		1BBF53751E7CDAE100E87BB1 /* SyncZone.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBF53671E7CDAE100E87BB1 /* SyncZone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BBF537F1E7CDD9000E87BB1 /* SyncZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF537E1E7CDD9000E87BB1 /* SyncZone.swift */; };
 		77F8DF89F3C3883ED6809A5D /* Pods_SyncZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504090D3BABAE650E374363F /* Pods_SyncZone.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		1BBF536D1E7CDAE100E87BB1 /* SyncZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyncZoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBF53721E7CDAE100E87BB1 /* SyncZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncZoneTests.swift; sourceTree = "<group>"; };
 		1BBF53741E7CDAE100E87BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BBF537E1E7CDD9000E87BB1 /* SyncZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncZone.swift; sourceTree = "<group>"; };
 		396034082AEAF37DA2DA535A /* Pods-SyncZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncZoneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SyncZoneTests/Pods-SyncZoneTests.release.xcconfig"; sourceTree = "<group>"; };
 		504090D3BABAE650E374363F /* Pods_SyncZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SyncZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF46E0F48D6ED00E1A3DFBB /* Pods_SyncZoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SyncZoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 			children = (
 				1BBF53671E7CDAE100E87BB1 /* SyncZone.h */,
 				1BBF53681E7CDAE100E87BB1 /* Info.plist */,
+				1BBF537E1E7CDD9000E87BB1 /* SyncZone.swift */,
 			);
 			path = SyncZone;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 					1BBF53631E7CDAE100E87BB1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9RHU72X3V7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					1BBF536C1E7CDAE100E87BB1 = {
@@ -313,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BBF537F1E7CDD9000E87BB1 /* SyncZone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +445,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7765919F1F50998FFA6861E5 /* Pods-SyncZone.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9RHU72X3V7;
@@ -452,6 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanghapark1021.SyncZone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -460,6 +468,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F5D8514BFF1DF9BA36801B0 /* Pods-SyncZone.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9RHU72X3V7;
@@ -480,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72758FDB13E3C660F8314CA5 /* Pods-SyncZoneTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9RHU72X3V7;
 				INFOPLIST_FILE = SyncZoneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -493,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 396034082AEAF37DA2DA535A /* Pods-SyncZoneTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9RHU72X3V7;
 				INFOPLIST_FILE = SyncZoneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
