@@ -23,6 +23,7 @@ class SyncZoneTests: XCTestCase {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
     self.avatar = nil
+    self.syncZoneCalled = false
   }
   
   override func tearDown() {
