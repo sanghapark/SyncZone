@@ -6,6 +6,8 @@ target 'SyncZone' do
   use_frameworks!
 
   # Pods for SyncZone
+  swift_version = "3.0"
+  pod "PromiseKit", "~> 4.0"
 
   target 'SyncZoneTests' do
     inherit! :search_paths

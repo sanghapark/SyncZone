@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0384471E422D310CECF193F7 /* Pods_SyncZoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF46E0F48D6ED00E1A3DFBB /* Pods_SyncZoneTests.framework */; };
 		1BBF536E1E7CDAE100E87BB1 /* SyncZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBF53641E7CDAE100E87BB1 /* SyncZone.framework */; };
 		1BBF53731E7CDAE100E87BB1 /* SyncZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF53721E7CDAE100E87BB1 /* SyncZoneTests.swift */; };
 		1BBF53751E7CDAE100E87BB1 /* SyncZone.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBF53671E7CDAE100E87BB1 /* SyncZone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77F8DF89F3C3883ED6809A5D /* Pods_SyncZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504090D3BABAE650E374363F /* Pods_SyncZone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,12 @@
 		1BBF536D1E7CDAE100E87BB1 /* SyncZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyncZoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBF53721E7CDAE100E87BB1 /* SyncZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncZoneTests.swift; sourceTree = "<group>"; };
 		1BBF53741E7CDAE100E87BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		396034082AEAF37DA2DA535A /* Pods-SyncZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncZoneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SyncZoneTests/Pods-SyncZoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		504090D3BABAE650E374363F /* Pods_SyncZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SyncZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF46E0F48D6ED00E1A3DFBB /* Pods_SyncZoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SyncZoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72758FDB13E3C660F8314CA5 /* Pods-SyncZoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncZoneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SyncZoneTests/Pods-SyncZoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7765919F1F50998FFA6861E5 /* Pods-SyncZone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncZone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SyncZone/Pods-SyncZone.debug.xcconfig"; sourceTree = "<group>"; };
+		7F5D8514BFF1DF9BA36801B0 /* Pods-SyncZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncZone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SyncZone/Pods-SyncZone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F8DF89F3C3883ED6809A5D /* Pods_SyncZone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BBF536E1E7CDAE100E87BB1 /* SyncZone.framework in Frameworks */,
+				0384471E422D310CECF193F7 /* Pods_SyncZoneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195FE8F1797FA9EF6C243724 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7765919F1F50998FFA6861E5 /* Pods-SyncZone.debug.xcconfig */,
+				7F5D8514BFF1DF9BA36801B0 /* Pods-SyncZone.release.xcconfig */,
+				72758FDB13E3C660F8314CA5 /* Pods-SyncZoneTests.debug.xcconfig */,
+				396034082AEAF37DA2DA535A /* Pods-SyncZoneTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1BBF535A1E7CDAE100E87BB1 = {
 			isa = PBXGroup;
 			children = (
 				1BBF53661E7CDAE100E87BB1 /* SyncZone */,
 				1BBF53711E7CDAE100E87BB1 /* SyncZoneTests */,
 				1BBF53651E7CDAE100E87BB1 /* Products */,
+				195FE8F1797FA9EF6C243724 /* Pods */,
+				AFF4A274DD233A1C9294CC01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +109,15 @@
 			path = SyncZoneTests;
 			sourceTree = "<group>";
 		};
+		AFF4A274DD233A1C9294CC01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				504090D3BABAE650E374363F /* Pods_SyncZone.framework */,
+				5DF46E0F48D6ED00E1A3DFBB /* Pods_SyncZoneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,10 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BBF53781E7CDAE100E87BB1 /* Build configuration list for PBXNativeTarget "SyncZone" */;
 			buildPhases = (
+				F045FA468F83590A807467BD /* [CP] Check Pods Manifest.lock */,
 				1BBF535F1E7CDAE100E87BB1 /* Sources */,
 				1BBF53601E7CDAE100E87BB1 /* Frameworks */,
 				1BBF53611E7CDAE100E87BB1 /* Headers */,
 				1BBF53621E7CDAE100E87BB1 /* Resources */,
+				4AC49BC4543C7BC7826CAE52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BBF537B1E7CDAE100E87BB1 /* Build configuration list for PBXNativeTarget "SyncZoneTests" */;
 			buildPhases = (
+				173EED274B6422D7F2FEDAEB /* [CP] Check Pods Manifest.lock */,
 				1BBF53691E7CDAE100E87BB1 /* Sources */,
 				1BBF536A1E7CDAE100E87BB1 /* Frameworks */,
 				1BBF536B1E7CDAE100E87BB1 /* Resources */,
+				E8F98DAE1A69E534E368F9E1 /* [CP] Embed Pods Frameworks */,
+				74496C99F8C0CBA418CEFB65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +229,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		173EED274B6422D7F2FEDAEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4AC49BC4543C7BC7826CAE52 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SyncZone/Pods-SyncZone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74496C99F8C0CBA418CEFB65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SyncZoneTests/Pods-SyncZoneTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F98DAE1A69E534E368F9E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SyncZoneTests/Pods-SyncZoneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F045FA468F83590A807467BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BBF535F1E7CDAE100E87BB1 /* Sources */ = {
@@ -267,6 +382,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -312,6 +428,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -321,6 +438,7 @@
 		};
 		1BBF53791E7CDAE100E87BB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7765919F1F50998FFA6861E5 /* Pods-SyncZone.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -340,6 +458,7 @@
 		};
 		1BBF537A1E7CDAE100E87BB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F5D8514BFF1DF9BA36801B0 /* Pods-SyncZone.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -359,6 +478,7 @@
 		};
 		1BBF537C1E7CDAE100E87BB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72758FDB13E3C660F8314CA5 /* Pods-SyncZoneTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9RHU72X3V7;
 				INFOPLIST_FILE = SyncZoneTests/Info.plist;
@@ -371,6 +491,7 @@
 		};
 		1BBF537D1E7CDAE100E87BB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 396034082AEAF37DA2DA535A /* Pods-SyncZoneTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9RHU72X3V7;
 				INFOPLIST_FILE = SyncZoneTests/Info.plist;
@@ -400,6 +521,7 @@
 				1BBF537A1E7CDAE100E87BB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BBF537B1E7CDAE100E87BB1 /* Build configuration list for PBXNativeTarget "SyncZoneTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +530,7 @@
 				1BBF537D1E7CDAE100E87BB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

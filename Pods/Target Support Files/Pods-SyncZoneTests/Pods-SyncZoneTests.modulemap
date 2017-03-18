@@ -1,0 +1,6 @@
+framework module Pods_SyncZoneTests {
+  umbrella header "Pods-SyncZoneTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
